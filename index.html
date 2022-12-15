@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="app">
+        <img src="../2022-12-15 19-07-49.gif" alt="">
+        <form>
+            <h3>confira o clima da sua cidade:</h3>
+            <div class="search-wrapper">
+                <div class="search">
+                    <input type="text" id="search-city"  placeholder="Ex: Fortaleza...">
+                    <button><i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+                <div class="suggestions">
+                    <ul class="suggestions-list">
+                        <!-- <li class="suggest-city"><span>Fortaleza</span><button><i class="fa-solid fa-magnifying-glass"></i></button></li>
+                        <li class="suggest-city"><span>São paulo</span><button><i class="fa-solid fa-magnifying-glass"></i></button></li>
+                        <li class="suggest-city"><span>Florianopolis</span><button><i class="fa-solid fa-magnifying-glass"></i></button></li>
+                        <li class="suggest-city"><span>Rio de janeiro</span><button><i class="fa-solid fa-magnifying-glass"></i></button></li>
+                        <li class="suggest-city"><span>Natal</span><button><i class="fa-solid fa-magnifying-glass"></i></button></li> -->
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <main class="main">
+                <div class="local">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <strong id="city"></strong>
+                    <img id="country-flag" src="" alt="bandeira do pais">
+                </div>
+                
+                <span id="degrees"></span>
+                
+                <div class="weather"> 
+                    <strong id="weather-description"></strong>   
+                    <img id="weather-icon" src="" alt="">
+                </div>
+
+                <div class="footer">
+                    <div class="prev-rain">
+                        <i class="fa-solid fa-droplet"></i> 
+                        <span id="humidity"></span>
+                    </div>
+                    <div class="prev-wind">
+                        <i class="fa-solid fa-wind"></i>
+                        <span id="weather-speed"></span>
+                    </div>
+                </div>
+                <div class="load">
+                    <div class="loading">
+                    </div>
+                </div>
+                <div class="message-error">
+                    <p>ops, cidade não encontrada !</p>
+                </div>
+            </main>
+        </form>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>

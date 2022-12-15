@@ -1,0 +1,200 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+}
+
+.app {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font: 400 1rem "Montserrat", sans-serif;
+}
+.app form {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 1.25rem;
+  padding: 2.5rem;
+  background-color: rgb(51, 21, 182);
+  border-radius: 1rem;
+  max-width: 350px;
+}
+.app form::before {
+  content: "";
+  position: absolute;
+  background-color: aqua;
+  inset: 0;
+  z-index: -1;
+  transform: rotate(10deg);
+  border-radius: 1rem;
+}
+.app form .search-wrapper .search {
+  display: flex;
+  gap: 0.2rem;
+}
+.app form .search-wrapper .search input {
+  flex: 1;
+  text-indent: 5px;
+  color: black;
+  border-radius: 0.2rem;
+  border: none;
+  font-size: 0.9rem;
+  font-weight: 700;
+  outline: none;
+}
+.app form .search-wrapper .search button {
+  padding: 0.75rem;
+  background-color: rgb(29, 195, 233);
+  border: none;
+  border-radius: 0.2rem;
+  cursor: pointer;
+  color: white;
+}
+.app form .search-wrapper .search button:hover {
+  filter: brightness(2);
+  color: rgb(0, 0, 0);
+}
+.app form .search-wrapper .suggestions {
+  position: relative;
+}
+.app form .search-wrapper .suggestions-list {
+  list-style: none;
+  width: 85%;
+  position: absolute;
+  transition: all 0.4s;
+  border-radius: 2px;
+  overflow: hidden;
+  z-index: 10;
+  box-shadow: 6px 6px 10px 0px rgba(0, 0, 0, 0.75);
+}
+.app form .search-wrapper .suggestions-list .suggest-city {
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  padding: 5px;
+  border: 1px solid;
+  background-color: rgb(75, 107, 134);
+}
+.app form .search-wrapper .suggestions-list .suggest-city:hover {
+  filter: brightness(0.9);
+}
+.app form .search-wrapper .suggestions-list .suggest-city button {
+  padding: 0.2rem;
+  border-radius: 0.2rem;
+  border: none;
+  color: rgb(255, 255, 255);
+  background-color: rgb(24, 171, 100);
+}
+.app form main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+.app form main .local {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+.app form main .local #country-flag {
+  max-width: 30px;
+  object-fit: cover;
+  border-radius: 2px;
+}
+.app form main #degrees {
+  font-size: 1rem;
+  font-weight: 700;
+}
+.app form main .weather {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.app form main .footer {
+  display: flex;
+}
+.app form main .footer .prev-rain {
+  border-right: 1px solid white;
+  padding: 0.25rem;
+  display: flex;
+  gap: 0.7rem;
+}
+.app form main .footer .prev-wind {
+  padding: 0.25rem;
+  display: flex;
+  gap: 0.7rem;
+}
+.app form main .load {
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(4px);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: grid;
+  place-items: center;
+  border-radius: 1rem;
+  top: -200px;
+  transition: all 0.3s;
+  z-index: 1000;
+}
+.app form main .load.active {
+  top: 0;
+}
+.app form main .loading {
+  animation: rotate linear 0.7s;
+  animation-iteration-count: infinite;
+  height: 60px;
+  width: 60px;
+  border: solid 15px rgb(201, 195, 195);
+  border-top: solid 15px cornflowerblue;
+  border-radius: 50%;
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.app form main .message-error {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: grid;
+  place-items: center;
+  transition: all 0.4s;
+  transform: translate(-300px);
+  border-radius: 0.5rem;
+  backdrop-filter: blur(4px);
+}
+.app form main .message-error.active {
+  transform: translate(0);
+}
+.app form .main::after {
+  position: absolute;
+  content: "";
+  inset: 0;
+  z-index: 1;
+}
+.app form .main.active::after {
+  background-color: rgb(51, 21, 182);
+}
+
+/*# sourceMappingURL=style.css.map */
