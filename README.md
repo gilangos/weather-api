@@ -1,5 +1,5 @@
-<h1>
-    clone interface Disney plus
+<h1 align="center">
+    Confira o clima da sua cidade.
 </h1>
 
 <p align="center">
