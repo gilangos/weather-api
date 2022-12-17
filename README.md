@@ -18,7 +18,7 @@ Este projeto é uma aplicação que verifica o clima de uma cidade, providencian
 - JavaScript
 - [Weather-API](https://openweathermap.org/api)
 
-## • preview
+## ➜ preview
 
 <p align="center">
   <img src="./.github/preview.gif" width="100%" />
