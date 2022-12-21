@@ -1,5 +1,5 @@
 
-const KEY = 'f6abf9d5e0495b96949e24115d9b42d0'
+const KEY = ''
 
 // ###### links para os assets ########
 const apiCountryURL = "https://countryflagsapi.com/png/";
